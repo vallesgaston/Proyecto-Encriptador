@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="logo__container">
+        <img src="Imagenes/Vector.svg" alt="" class="logo" />
+      </section>
+
+      <section class="encriptar__container">
+        <div class="text__container">
+          <textarea
+            id="texto"
+            rows="4"
+            cols="50"
+            oninput="convertir()"
+            placeholder="Ingrese el texto aqui"></textarea>
+        </div>
+
+        <div class="warning__img">
+          <img class="warning" src="Imagenes/Alerta.svg" alt="" />
+          <p class="warning__description">
+            Solo letras minúsculas y sin acentos
+          </p>
+        </div>
+
+        <div class="buttons__container">
+          <button
+            class="encriptar__button button"
+            id="cifrar"
+            onclick="setOption('cifrar')">
+            Encriptar
+          </button>
+          <button
+            class="desencriptar__button button"
+            id="descifrar"
+            onclick="setOption('descifrar')">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+
+      <section class="message__container">
+        <div class="doll__container hidden">
+          <img src="Imagenes/Muñeco.svg" alt="" class="doll" />
+        </div>
+
+        <div class="description__container">
+          <p class="description__1">Ningún mensaje fue encontrado</p>
+          <p class="description__2">
+            Ingresa el texto que desees encriptar o desencriptar.
+          </p>
+        </div>
+
+        <div class="textarea__container hide">
+          <label for="resultado"></label>
+          <textarea id="resultado" rows="4" cols="50" readonly></textarea>
+        </div>
+
+        <div class="copy__button__container hide">
+          <button class="copy__button button" onclick="copiar()">Copiar</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- <footer class="links">
+        <a href="" class="github">GitHub</a>
+        <a href="" class="linkedin">LinkedIn</a>
+    </footer> -->
+  </body>
+  <script src="main.js"></script>
+</html>
